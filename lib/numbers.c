@@ -1,4 +1,6 @@
 #include "numbers.h"
+#include <stdlib.h>
+#include <unistd.h>
 #include <math.h>
 
 /*=============================================================================
@@ -14,6 +16,45 @@
  *
  *===========================================================================*/
 
+
+/*=============================================================================
+ *
+ * Function name: is_palendrome
+ *
+ * Parameters: int value - the value to test for palendromeness.
+ *
+ * Returns: boolean - true if product is a palendrome, false otherwise.
+ *
+ * Desciption: find the largest palendrome product of two three digit numbers.
+ *
+ *===========================================================================*/
+bool is_palendrome(int value)
+{
+    char* a = itoa(value);
+
+    int len = strlen(a);
+
+    if (len == 1)
+    {
+        free(a);
+        return true;
+    }
+
+    int i = 0;
+    int last = len-1;
+    int stop = ((len % 2 == 0) ? len/2 : len/2 - 1);
+
+    while (i < stop)
+    {
+        if (a[i] != a[last-i])
+             return false;
+        i++;
+    }
+
+    free(a);
+
+    return true;
+}
 
 /*=============================================================================
  *

@@ -21,3 +21,4 @@ int fib(int n);
 bool is_prime(int n);
 long largest_prime_factor(long factoree);
 long next_prime(long n);
+bool is_palendrome(int value);
