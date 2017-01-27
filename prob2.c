@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "numbers.h"
 
 /*=============================================================================
  *
@@ -13,20 +14,7 @@
  *             terms.
  *
  *===========================================================================*/
-
-/* return the nth value in the Fibonacci sequence. */
-int fib(int n)
-{
-    double root_5 = sqrt(5);
-    double phi_1 = (1 + root_5)/2;
-    double phi_2 = 1 - phi_1;
-    
-    return round((pow(phi_1, n) - pow(phi_2, n))/root_5);
-}
-
-int main(int ac, char** av)
-{
-    int limit = 4e6;
+int main(int ac, char** av) { int limit = 4e6;
 
     if (ac > 1)
       limit = atoi(av[1]);
