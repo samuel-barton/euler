@@ -7,5 +7,7 @@ prob3: prob3.c
 	$(compile) -lnumbers -o prob3 prob3.c
 prob4: prob4.c
 	$(compile) -lnumbers -lstrings -o prob4 prob4.c
+prob5: prob5.c
+	$(compile) -lnumbers -o prob5 prob5.c
 clean: 
 	ls -F | grep "*" | sed 's/*//' | xargs rm
