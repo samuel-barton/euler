@@ -8,7 +8,8 @@
  * Project: Project Euler challenges
  *
  * Desciption: find the smallest number easily divisible by all the numbers
- *             from 1 to 20.
+ *             from 1 to 20. We only need to consider eight of the 20 values as
+ *             if they are divided by the number, then all 20 must be.
  *
  *===========================================================================*/
 int test_vals[8] = {20,19,18,17,16,14,13,11};
