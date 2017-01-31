@@ -119,7 +119,8 @@ long next_prime(long n)
             new_prime++;
             i = 2;
         }
-        i++;
+        else
+            i++;
     }
 
     return new_prime;

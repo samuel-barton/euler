@@ -9,5 +9,7 @@ prob4: prob4.c
 	$(compile) -lnumbers -lstrings -o prob4 prob4.c
 prob5: prob5.c
 	$(compile) -lnumbers -o prob5 prob5.c
+prob7: prob7.c
+	$(compile) -lnumbers -o prob7 prob7.c
 clean: 
 	ls -F | grep "*" | sed 's/*//' | xargs rm
