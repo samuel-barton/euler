@@ -112,7 +112,7 @@ long next_prime(long n)
    
     long new_prime = n + 1;
 
-    while (i < new_prime)
+    while (i < sqrt(new_prime))
     {
         if (new_prime % i == 0)
         {

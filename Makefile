@@ -11,5 +11,7 @@ prob5: prob5.c
 	$(compile) -lnumbers -o prob5 prob5.c
 prob7: prob7.c
 	$(compile) -lnumbers -o prob7 prob7.c
+prob8: prob8.c
+	$(compile) -o prob8 prob8.c
 clean: 
 	ls -F | grep "*" | sed 's/*//' | xargs rm
