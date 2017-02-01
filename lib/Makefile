@@ -5,3 +5,6 @@ numbers: numbers.c
 strings: strings.c
 	gcc -c strings.c; \
 	ar -cvq libstrings.a strings.o
+arrays: arrays.c
+	gcc -c arrays.c; \
+	ar -cvq libarrays.a arrays.o
