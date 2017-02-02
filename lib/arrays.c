@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*=============================================================================
  *
  * Function name: binarySearch
@@ -15,21 +17,21 @@
 int binarySearch(int** array, int length, int value)
 {
     unsigned int low = 0;
-    unsigned int high = length -1;
+    unsigned int high = length-1;
     unsigned int mid = length/2;
     int index = -1;
 
-    while (high - low > 1)
+    while (high >= low)
     {
         if ((*array)[mid] < value)
         {
-            low = mid;
-            mid += (high - mid)/2;
+            low = mid + 1;
+            mid = (high + mid) / 2;
         }
         else if ((*array)[mid] > value)
         {
-            high = mid;
-            mid -= (mid - low)/2;
+            high = mid - 1;
+            mid = (mid + low) / 2;
         }
         else
         {
